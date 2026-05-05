@@ -171,16 +171,6 @@ To keep the project lightweight and smooth:
 
 ---
 
-## 📸 Preview
-
-You can add a screenshot or GIF here later:
-
-```markdown
-![Fotogram Preview](./assets/img/preview.png)
-```
-
----
-
 ## 👨‍💻 Author
 
 **KamyCoding**
