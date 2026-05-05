@@ -2,20 +2,30 @@
 
 <p align="center">
   <a href="https://github.com/kamycoding/fotogram-da">
-    <img src="https://img.shields.io/badge/Repository-GitHub-181717?logo=github" alt="GitHub Repository">
+    <img src="https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository" />
   </a>
   <a href="https://your-live-demo-link.com">
-    <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-0A66C2?logo=googlechrome&logoColor=white" alt="Live Demo">
+    <img src="https://img.shields.io/badge/Live%20Demo-View%20Project-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
   </a>
-  <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-Dynamic%20Rendering-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Responsive-Yes-success" alt="Responsive">
-  <img src="https://img.shields.io/badge/Accessibility-Basic-important" alt="Accessibility">
 </p>
 
-A responsive and interactive **photo gallery project** built with **HTML, CSS, and JavaScript**.  
-Fotogram displays images as thumbnails, allows users to open them in a large detail view, and provides smooth navigation through the gallery.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-Dynamic%20Rendering-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Responsive-Yes-success?style=flat-square" alt="Responsive" />
+  <img src="https://img.shields.io/badge/Accessibility-Basic-important?style=flat-square" alt="Accessibility" />
+</p>
+
+---
+
+## 🧾 About The Project
+
+**Fotogram** is a responsive and interactive photo gallery project built with **HTML, CSS, and Vanilla JavaScript**.
+
+The project displays a collection of images as thumbnails. Users can click on an image to open it in a larger detail view and navigate through the gallery using previous and next controls.
+
+This project focuses on dynamic rendering, DOM manipulation, responsive layout behavior, and basic accessibility improvements.
 
 ---
 
@@ -28,39 +38,43 @@ Fotogram displays images as thumbnails, allows users to open them in a large det
 
 ## ✨ Features
 
-- 🖼️ **Dynamic gallery rendering** with JavaScript
-- 🔍 **Thumbnail preview** for all photos
-- 🎯 **Hover effect** on gallery images
-- 📸 **Large image view** on click
-- ⬅️➡️ **Previous / Next navigation** in detail view
-- ❌ **Close modal** by:
-  - clicking the background
-  - pressing the `Esc` key
-- ⌨️ **Keyboard accessibility**
-  - buttons are reachable via `Tab`
-- ⚡ **Optimized image loading**
-- 📱 **Responsive layout** for different screen sizes
+- 🖼️ Dynamic gallery rendering with JavaScript
+- 🔍 Thumbnail overview for all photos
+- 🎯 Hover effects on gallery images
+- 📸 Large image detail view on click
+- ⬅️➡️ Previous and next image navigation
+- ❌ Modal close functionality
+  - close by clicking the background
+  - close by pressing the `Esc` key
+- ⌨️ Basic keyboard accessibility
+- 🧩 Semantic HTML structure
+- 📱 Responsive layout for different screen sizes
+- ⚡ Lightweight project structure without external libraries
 
 ---
 
 ## 🧠 Project Goal
 
-The goal of this project is to practice:
+The goal of this project was to practice and improve:
 
 - DOM manipulation
 - dynamic rendering with JavaScript
+- event handling
+- modal logic
 - responsive web design
-- user interaction handling
-- basic accessibility principles
 - clean HTML, CSS, and JavaScript structure
+- basic accessibility principles
+- image optimization and performance awareness
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (Vanilla JS)**
+<p align="left">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+</p>
 
 ---
 
@@ -78,57 +92,104 @@ fotogram-da/
 └── README.md
 ```
 
-🚀 Getting Started
+---
 
-1. Clone the repository
-   git clone git@github.com:kamycoding/fotogram-da.git
-2. Open the project folder
-   cd fotogram-da
-3. Run the project
+## 🚀 Getting Started
 
-Open index.html in your browser.
+To run this project locally, follow these steps:
+
+### 1. Clone the repository
+
+```bash
+git clone git@github.com:kamycoding/fotogram-da.git
+```
+
+### 2. Open the project folder
+
+```bash
+cd fotogram-da
+```
+
+### 3. Run the project
+
+Open the `index.html` file in your browser.
 
 No package installation or build step is required.
 
-👀 How It Works
-All images are rendered dynamically with JavaScript.
-Users first see the gallery in a thumbnail overview.
-By clicking an image, a larger detail view opens.
+---
+
+## 👀 How It Works
+
+The gallery images are rendered dynamically with JavaScript.
+
+Users first see a thumbnail overview of all images.  
+When an image is clicked, a larger detail view opens.
+
 Inside the detail view, users can:
-go to the previous image
-go to the next image
-close the view again
-♿ Accessibility
+
+- navigate to the previous image
+- navigate to the next image
+- close the detail view
+- use the `Esc` key to close the modal
+
+---
+
+## ♿ Accessibility
 
 This project includes basic accessibility improvements such as:
 
-semantic HTML structure
-meaningful alt attributes
-keyboard-accessible controls
-clear and understandable interactions
-only one h1 on the page
-📱 Responsive Design
+- semantic HTML structure
+- meaningful `alt` attributes for images
+- keyboard-accessible controls
+- clear button behavior
+- only one `h1` on the page
+- understandable user interactions
 
-The gallery is designed to work across different screen sizes and devices.
+---
 
-desktop 💻
-tablet 📱
-mobile 📲
-⚡ Performance
+## 📱 Responsive Design
 
-To ensure a smooth experience:
+The gallery layout is designed to work across different screen sizes:
 
-images are compressed
-image sizes are optimized
-the layout is kept lightweight and fast
-📸 Preview
+- desktop 💻
+- tablet 📱
+- mobile 📲
 
-You can add a screenshot or gif here later:
+The layout adapts to different viewport widths to keep the gallery clean and usable.
 
+---
+
+## ⚡ Performance
+
+To keep the project lightweight and smooth:
+
+- images are compressed
+- image sizes are optimized
+- no external libraries are used
+- the layout stays simple and fast
+- JavaScript only handles the required gallery logic
+
+---
+
+## 📸 Preview
+
+You can add a screenshot or GIF here later:
+
+```markdown
 ![Fotogram Preview](./assets/img/preview.png)
-👨‍💻 Author : KamyCoding
+```
 
-GitHub: @kamycoding
-📄 License
+---
+
+## 👨‍💻 Author
+
+**KamyCoding**
+
+- GitHub: [@kamycoding](https://github.com/kamycoding)
+- Portfolio: [kamycoding.com](https://www.kamycoding.com)
+
+---
+
+## 📄 License
 
 This project was created for learning purposes as part of a web development course.
