@@ -1,0 +1,9 @@
+.site-header {
+  background-color: var(--color-blue-95);
+}
+
+.site-header__content {
+  display: flex;
+  align-items: center;
+  padding: var(--header-padding-block) var(--header-padding-inline);
+}

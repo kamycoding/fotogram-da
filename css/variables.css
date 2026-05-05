@@ -1,0 +1,21 @@
+:root {
+  --font-primary: "Figtree", Arial, Helvetica, sans-serif;
+
+  --color-red-40: #fd5b4f;
+  --color-red-50: #fc2d1c;
+
+  --color-blue-40: #6bc1e1;
+  --color-blue-85: #124658;
+  --color-blue-90: #0d3240;
+  --color-blue-95: #09212a;
+  --color-blue-100: #041115;
+
+  --color-white: #ffffff;
+  --color-gray-30: #b6c4c9;
+  --color-gray-40: #99acb3;
+  --color-page-background: #06171e;
+
+  --container-max-width: 1440px;
+  --header-padding-block: 20px;
+  --header-padding-inline: 140px;
+}
