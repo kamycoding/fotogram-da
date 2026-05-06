@@ -3,6 +3,7 @@
   margin: 0 auto;
 }
 
+/* Header */
 .site-header {
   width: 100%;
   background-color: var(--color-blue-95);
@@ -17,4 +18,18 @@
 .site-logo {
   display: inline-flex;
   align-items: center;
+}
+
+/* Main */
+.site-main {
+  padding-top: 160px;
+}
+
+.gallery-section__title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--color-white);
 }
