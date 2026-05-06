@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./assets/icons/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/icons/apple-touch-icon.png"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__content content-container">
+        <a class="site-logo" href="./index.html" aria-label="Fotogram home">
+          <img
+            class="site-logo__image"
+            src="./assets/icons/fotogram-logo.svg"
+            alt="Fotogram logo"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main class="site-main">
+      <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="gallery-section__content content-container">
+          <h1 id="gallery-title" class="gallery-section__title">
+            Your personal photo album
+          </h1>
+          <div id="gallery" class="gallery-grid"></div>
+        </div>
+      </section>
+    </main>
+    <div id="dialog-container" class="dialog-container"></div>
+  </body>
+</html>

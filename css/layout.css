@@ -1,0 +1,20 @@
+.content-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.site-header {
+  width: 100%;
+  background-color: var(--color-blue-95);
+}
+
+.site-header__content {
+  display: flex;
+  align-items: center;
+  padding: var(--header-padding-block) var(--header-padding-inline);
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+}
