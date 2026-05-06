@@ -18,4 +18,10 @@
   --container-max-width: 1440px;
   --header-padding-block: 20px;
   --header-padding-inline: 140px;
+
+  --gallery-image-size: 150px;
+  --gallery-grid-gap: 16px;
+  --gallery-title-spacing: 80px;
+  --gallery-border-width: 2px;
+  --gallery-border-radius: 12px;
 }

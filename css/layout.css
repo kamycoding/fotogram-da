@@ -33,3 +33,15 @@
   text-align: center;
   color: var(--color-white);
 }
+
+.gallery-section__content {
+  padding-inline: 140px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gallery-grid-gap);
+  margin-top: var(--gallery-title-spacing);
+}
