@@ -23,3 +23,8 @@
   border-color: var(--color-blue-40);
   transform: scale(1.04);
 }
+
+.gallery-card:focus-visible {
+  outline: 3px solid var(--color-blue-40);
+  outline-offset: 4px;
+}
