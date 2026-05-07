@@ -58,6 +58,17 @@ const renderGallery = () => {
   ).join("");
 };
 
+const openDialog = (imageIndex) => {
+  const dialogContainer = document.getElementById("dialog-container");
+  const selectedImage = GALLERY_IMAGES[imageIndex];
+
+  dialogContainer.innerHTML = getImageDialogTemplate(
+    selectedImage,
+    imageIndex,
+    GALLERY_IMAGES.length,
+  );
+};
+
 const init = () => {
   renderGallery();
 };
