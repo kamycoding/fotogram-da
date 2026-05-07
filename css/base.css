@@ -3,6 +3,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-page-background);
   color: var(--color-white);
   font-family: var(--font-primary);
