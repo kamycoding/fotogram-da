@@ -6,7 +6,7 @@ const getGalleryImageTemplate = (image, index) => {
   `;
 };
 
-const getImageDIalogTemplate = (image, index, totalImage) => {
+const getImageDialogTemplate = (image, index, totalImages) => {
   return /*html*/ `
     <div class="image-dialog" role="dialog" aria-modal="true" aria-label="${image.alt}">
       <div class="image-dialog__content">
