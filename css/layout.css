@@ -42,6 +42,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--gallery-grid-gap);
+  column-gap: var(--gallery-column-gap);
+  row-gap: var(--gallery-row-gap);
   margin-top: var(--gallery-title-spacing);
 }

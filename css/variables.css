@@ -20,8 +20,9 @@
   --header-padding-inline: 140px;
 
   --gallery-image-size: 150px;
-  --gallery-grid-gap: 16px;
+  --gallery-column-gap: 16px;
+  --gallery-row-gap: 48px;
   --gallery-title-spacing: 80px;
   --gallery-border-width: 2px;
-  --gallery-border-radius: 12px;
+  --gallery-border-radius: 16px;
 }
