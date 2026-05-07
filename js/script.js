@@ -57,3 +57,9 @@ const renderGallery = () => {
     getGalleryImageTemplate(image, index),
   ).join("");
 };
+
+const init = () => {
+  renderGallery();
+};
+
+init();
