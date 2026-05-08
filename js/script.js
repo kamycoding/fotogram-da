@@ -91,6 +91,8 @@ const openDialog = (imageIndex) => {
   );
 
   addDialogCloseEvent();
+
+  addDialogBackgroundClickEvent();
 };
 
 const closeDialog = () => {
@@ -103,6 +105,12 @@ const addDialogCloseEvent = () => {
   const closeButton = document.querySelector(".image-dialog__close-button");
 
   closeButton.addEventListener("click", closeDialog);
+};
+
+const addDialogBackgroundClickEvent = () => {
+  const dialog = document.querySelector(".image-dialog");
+
+  dialog.addEventListener("click", closeDialog);
 };
 
 const addGalleryClickEvents = () => {
