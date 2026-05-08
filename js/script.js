@@ -93,6 +93,8 @@ const openDialog = (imageIndex) => {
   addDialogCloseEvent();
 
   addDialogBackgroundClickEvent();
+
+  addDialogContentClickEvent();
 };
 
 const closeDialog = () => {
@@ -111,6 +113,14 @@ const addDialogBackgroundClickEvent = () => {
   const dialog = document.querySelector(".image-dialog");
 
   dialog.addEventListener("click", closeDialog);
+};
+
+const addDialogContentClickEvent = () => {
+  const dialogContent = document.querySelector(".image-dialog__content");
+
+  dialogContent.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
 };
 
 const addGalleryClickEvents = () => {
