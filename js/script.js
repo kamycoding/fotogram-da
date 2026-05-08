@@ -91,9 +91,7 @@ const openDialog = (imageIndex) => {
   );
 
   addDialogCloseEvent();
-
   addDialogBackgroundClickEvent();
-
   addDialogContentClickEvent();
 };
 
@@ -123,6 +121,14 @@ const addDialogContentClickEvent = () => {
   });
 };
 
+const addEscapeKeyEvent = () => {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeDialog();
+    }
+  });
+};
+
 const addGalleryClickEvents = () => {
   const galleryCards = document.querySelectorAll(".gallery-card");
 
@@ -138,6 +144,7 @@ const addGalleryClickEvents = () => {
 const init = () => {
   renderGallery();
   addGalleryClickEvents();
+  addEscapeKeyEvent();
 };
 
 init();
