@@ -89,12 +89,20 @@ const openDialog = (imageIndex) => {
     imageIndex,
     GALLERY_IMAGES.length,
   );
+
+  addDialogCloseEvent();
 };
 
 const closeDialog = () => {
   const dialogContainer = document.getElementById("dialog-container");
 
   dialogContainer.innerHTML = "";
+};
+
+const addDialogCloseEvent = () => {
+  const closeButton = document.querySelector(".image-dialog__close-button");
+
+  closeButton.addEventListener("click", closeDialog);
 };
 
 const addGalleryClickEvents = () => {
