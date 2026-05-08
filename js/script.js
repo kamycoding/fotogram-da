@@ -101,6 +101,14 @@ const closeDialog = () => {
   dialogContainer.innerHTML = "";
 };
 
+const getNextImageIndex = (currentIndex) => {
+  return (currentIndex + 1) % GALLERY_IMAGES.length;
+};
+
+const getPreviousImageIndex = (currentIndex) => {
+  return (currentIndex - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length;
+};
+
 const addDialogCloseEvent = () => {
   const closeButton = document.querySelector(".image-dialog__close-button");
 
