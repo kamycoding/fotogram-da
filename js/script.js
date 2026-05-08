@@ -93,6 +93,7 @@ const openDialog = (imageIndex) => {
   addDialogCloseEvent();
   addDialogBackgroundClickEvent();
   addDialogContentClickEvent();
+  addDialogNavigationEvents(imageIndex);
 };
 
 const closeDialog = () => {
@@ -113,6 +114,23 @@ const addDialogCloseEvent = () => {
   const closeButton = document.querySelector(".image-dialog__close-button");
 
   closeButton.addEventListener("click", closeDialog);
+};
+
+const addDialogNavigationEvents = (imageIndex) => {
+  const previousButton = document.querySelector(
+    ".image-dialog__control-button:first-child",
+  );
+  const nextButton = document.querySelector(
+    ".image-dialog__control-button:last-child",
+  );
+
+  previousButton.addEventListener("click", () => {
+    openDialog(getPreviousImageIndex(imageIndex));
+  });
+
+  nextButton.addEventListener("click", () => {
+    openDialog(getNextImageIndex(imageIndex));
+  });
 };
 
 const addDialogBackgroundClickEvent = () => {
