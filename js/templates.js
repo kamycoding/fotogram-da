@@ -8,12 +8,17 @@ const getGalleryImageTemplate = (image, index) => {
 
 const getImageDialogTemplate = (image, index, totalImages) => {
   return /*html*/ `
-    <div class="image-dialog" role="dialog" aria-modal="true" aria-label="${image.alt}">
+    <div class="image-dialog" role="dialog" aria-modal="true" aria-label="Image dialog: ${image.title}">
       <div class="image-dialog__content">
         <div class="image-dialog__header">
-          <h2 class="image-dialog__title">${image.alt}</h2>
+          <h2 class="image-dialog__title">${image.title}</h2>
           <button class="image-dialog__close-button" type="button" aria-label="Close image dialog">
-            ×
+            <img
+              class="image-dialog__close-icon"
+              src="./assets/icons/close-icon.svg"
+              alt=""
+              aria-hidden="true"
+             >
           </button>
         </div>
 
