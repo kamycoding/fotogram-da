@@ -69,8 +69,21 @@ const openDialog = (imageIndex) => {
   );
 };
 
+const addGalleryClickEvents = () => {
+  const galleryCards = document.querySelectorAll(".gallery-card");
+
+  galleryCards.forEach((galleryCard) => {
+    galleryCard.addEventListener("click", () => {
+      const imageIndex = Number(galleryCard.dataset.imageIndex);
+
+      openDialog(imageIndex);
+    });
+  });
+};
+
 const init = () => {
   renderGallery();
+  addGalleryClickEvents();
 };
 
 init();
