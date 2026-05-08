@@ -91,6 +91,12 @@ const openDialog = (imageIndex) => {
   );
 };
 
+const closeDialog = () => {
+  const dialogContainer = document.getElementById("dialog-container");
+
+  dialogContainer.innerHTML = "";
+};
+
 const addGalleryClickEvents = () => {
   const galleryCards = document.querySelectorAll(".gallery-card");
 
