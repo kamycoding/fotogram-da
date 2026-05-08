@@ -70,10 +70,11 @@
   padding: 0;
   border: 0;
   background-color: transparent;
-  color: var(--color-white);
-  font-size: 28px;
-  line-height: 1;
   cursor: pointer;
+}
+
+.image-dialog__close-icon {
+  display: block;
 }
 
 .image-dialog__image {
