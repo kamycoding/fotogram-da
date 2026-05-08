@@ -70,7 +70,6 @@ const openDialog = (imageIndex) => {
 };
 
 const init = () => {
-  openDialog(0);
   renderGallery();
 };
 
