@@ -21,13 +21,23 @@ const getImageDialogTemplate = (image, index, totalImages) => {
 
         <div class="image-dialog__controls">
           <button class="image-dialog__control-button" type="button" aria-label="Show previous image">
-            ←
+            <img
+              class="image-dialog__control-icon"
+              src="./assets/icons/arrow-left.svg"
+              alt=""
+              aria-hidden="true"
+            >
           </button>
 
           <span class="image-dialog__counter">${index + 1}/${totalImages}</span>
 
           <button class="image-dialog__control-button" type="button" aria-label="Show next image">
-            →
+            <img
+              class="image-dialog__control-icon"
+              src="./assets/icons/arrow-right.svg"
+              alt=""
+              aria-hidden="true"
+            >
           </button>
         </div>
       </div>
