@@ -105,6 +105,12 @@ const closeDialog = () => {
   dialogContainer.innerHTML = "";
 };
 
+const isDialogOpen = () => {
+  const dialog = document.querySelector(".image-dialog");
+
+  return dialog !== null;
+};
+
 const getNextImageIndex = (currentIndex) => {
   return (currentIndex + 1) % GALLERY_IMAGES.length;
 };
@@ -154,6 +160,20 @@ const addEscapeKeyEvent = () => {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeDialog();
+      return;
+    }
+
+    if (!isDialogOpen()) {
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      openDialog(getNextImageIndex(currentImageIndex));
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+      openDialog(getPreviousImageIndex(currentImageIndex));
     }
   });
 };
