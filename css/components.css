@@ -73,6 +73,12 @@
   cursor: pointer;
 }
 
+.image-dialog__close-button:focus-visible {
+  outline: 3px solid var(--color-blue-40);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
 .image-dialog__close-icon {
   display: block;
 }
@@ -112,6 +118,11 @@
 .image-dialog__control-button:hover {
   background-color: rgba(253, 91, 79, 0.22);
   transform: scale(1.04);
+}
+
+.image-dialog__control-button:focus-visible {
+  outline: 3px solid var(--color-blue-40);
+  outline-offset: 4px;
 }
 
 .image-dialog__counter {
