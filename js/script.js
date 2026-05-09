@@ -71,6 +71,7 @@ const GALLERY_IMAGES = [
     title: "Terminal command line",
   },
 ];
+let currentImageIndex = 0;
 
 const renderGallery = () => {
   const galleryElement = document.getElementById("gallery");
@@ -81,6 +82,8 @@ const renderGallery = () => {
 };
 
 const openDialog = (imageIndex) => {
+  currentImageIndex = imageIndex;
+
   const dialogContainer = document.getElementById("dialog-container");
   const selectedImage = GALLERY_IMAGES[imageIndex];
 
@@ -93,6 +96,7 @@ const openDialog = (imageIndex) => {
   addDialogCloseEvent();
   addDialogBackgroundClickEvent();
   addDialogContentClickEvent();
+  addDialogNavigationEvents(imageIndex);
 };
 
 const closeDialog = () => {
@@ -113,6 +117,23 @@ const addDialogCloseEvent = () => {
   const closeButton = document.querySelector(".image-dialog__close-button");
 
   closeButton.addEventListener("click", closeDialog);
+};
+
+const addDialogNavigationEvents = (imageIndex) => {
+  const previousButton = document.querySelector(
+    ".image-dialog__control-button:first-child",
+  );
+  const nextButton = document.querySelector(
+    ".image-dialog__control-button:last-child",
+  );
+
+  previousButton.addEventListener("click", () => {
+    openDialog(getPreviousImageIndex(imageIndex));
+  });
+
+  nextButton.addEventListener("click", () => {
+    openDialog(getNextImageIndex(imageIndex));
+  });
 };
 
 const addDialogBackgroundClickEvent = () => {
