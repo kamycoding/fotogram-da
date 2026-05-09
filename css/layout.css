@@ -22,8 +22,8 @@
 
 /* Main */
 .site-main {
-  flex: 1;
   padding-top: 160px;
+  padding-bottom: 160px;
 }
 
 .gallery-section__title {
@@ -51,25 +51,22 @@
 /* Footer */
 .site-footer {
   width: 100%;
-  min-height: 128px;
-  margin-top: 160px;
+  margin-top: auto;
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 
 .site-footer::before {
   content: "";
   position: absolute;
-  inset: auto 50% 0;
-  width: 100vw;
-  min-width: 100%;
-  aspect-ratio: 1920 / 127;
+  inset: 0 auto 0 50%;
+  width: max(100%, var(--container-max-width));
   transform: translateX(-50%);
   background-image: url("../assets/icons/shape-footer.svg");
-  background-size: 100% 100%;
+  background-size: 100% auto;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -81,7 +78,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 28px 16px 16px;
+  padding: 24px 16px 16px;
 }
 
 .site-footer__copyright {
