@@ -71,6 +71,7 @@ const GALLERY_IMAGES = [
     title: "Terminal command line",
   },
 ];
+let currentImageIndex = 0;
 
 const renderGallery = () => {
   const galleryElement = document.getElementById("gallery");
@@ -81,6 +82,8 @@ const renderGallery = () => {
 };
 
 const openDialog = (imageIndex) => {
+  currentImageIndex = imageIndex;
+
   const dialogContainer = document.getElementById("dialog-container");
   const selectedImage = GALLERY_IMAGES[imageIndex];
 
