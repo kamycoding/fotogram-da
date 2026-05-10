@@ -1,74 +1,86 @@
 const GALLERY_IMAGES = [
   {
-    src: "./assets/img/gallery/code-editor-workspace.jpg",
-    alt: "Code editor workspace on a desk",
-    title: "Code editor workspace",
+    src: "./assets/img/newGallery/meine-ruhe.jpg",
+    alt: "Meine Ruhe",
+    title: "Meine Ruhe",
+    description: "Feuer und frische Luft",
   },
 
   {
-    src: "./assets/img/gallery/dark-mode-code.jpg",
-    alt: "Code displayed in a dark mode editor",
-    title: "Dark mode code",
+    src: "./assets/img/newGallery/meine-lieblingssucht.jpg",
+    alt: "Meine Lieblingssucht",
+    title: "Meine Lieblingssucht",
+    description: "Dota 2",
   },
 
   {
-    src: "./assets/img/gallery/debugging-console.jpg",
-    alt: "Debugging console with logs on screen",
-    title: "Debugging console",
+    src: "./assets/img/newGallery/mein-feindbild.jpg",
+    alt: "Mein Feindbild",
+    title: "Mein Feindbild",
+    description: "Apple-Ökosystem",
   },
 
   {
-    src: "./assets/img/gallery/developer-desk-setup.jpg",
-    alt: "Developer desk setup with laptop and monitor",
-    title: "Developer desk setup",
+    src: "./assets/img/newGallery/mein-stolz.jpg",
+    alt: "Mein Stolz",
+    title: "Mein Stolz",
+    description: "I use Linux btw",
   },
 
   {
-    src: "./assets/img/gallery/frontend-project-preview.jpg",
-    alt: "Frontend project preview in a browser window",
-    title: "Frontend project preview",
+    src: "./assets/img/newGallery/mein-altestes-hobby.png",
+    alt: "Mein ältestes Hobby",
+    title: "Mein ältestes Hobby",
+    description: "immer unterwegs",
   },
 
   {
-    src: "./assets/img/gallery/github-version-control.jpg",
-    alt: "GitHub version control interface on screen",
-    title: "GitHub version control",
+    src: "./assets/img/newGallery/mein-traumauto.jpg",
+    alt: "Mein Traumauto",
+    title: "Mein Traumauto",
+    description: "zu teuer für meinen Lifestyle",
   },
 
   {
-    src: "./assets/img/gallery/html-css-layout.jpg",
-    alt: "HTML and CSS layout code in an editor",
-    title: "HTML and CSS layout",
+    src: "./assets/img/newGallery/mein-lieblingsessen.jpg",
+    alt: "Mein Lieblingsessen",
+    title: "Mein Lieblingsessen",
+    description: "persisches Essen",
   },
 
   {
-    src: "./assets/img/gallery/javascript-code-screen.jpg",
-    alt: "JavaScript code shown on a screen",
-    title: "JavaScript code screen",
+    src: "./assets/img/newGallery/mein-superpower.jpg",
+    alt: "Mein Superpower",
+    title: "Mein Superpower",
+    description: "überall arbeiten",
   },
 
   {
-    src: "./assets/img/gallery/laptop-coding-session.jpg",
-    alt: "Laptop during a coding session",
-    title: "Laptop coding session",
+    src: "./assets/img/newGallery/mein-lieblingsmensch.jpg",
+    alt: "Mein Lieblingsmensch",
+    title: "Mein Lieblingsmensch",
+    description: "meine Teamkollegin",
   },
 
   {
-    src: "./assets/img/gallery/react-component-code.jpg",
-    alt: "React component code in a code editor",
-    title: "React component code",
+    src: "./assets/img/newGallery/meine-grosste-herausforderung.jpg",
+    alt: "Meine größte Herausforderung",
+    title: "Meine größte Herausforderung",
+    description: "Apple-Ökosystem",
   },
 
   {
-    src: "./assets/img/gallery/responsive-design-code.jpg",
-    alt: "Responsive design code in a browser developer view",
-    title: "Responsive design code",
+    src: "./assets/img/newGallery/meine-kindheit.jpg",
+    alt: "Meine Kindheit",
+    title: "Meine Kindheit",
+    description: "Dörfer bauen",
   },
 
   {
-    src: "./assets/img/gallery/terminal-command-line.jpg",
-    alt: "Terminal command line open on a computer screen",
-    title: "Terminal command line",
+    src: "./assets/img/newGallery/mein-reisetyp.jpg",
+    alt: "Mein Reisetyp",
+    title: "Mein Reisetyp",
+    description: "laufen und verlieren",
   },
 ];
 let currentImageIndex = 0;
@@ -93,10 +105,13 @@ const openDialog = (imageIndex) => {
     GALLERY_IMAGES.length,
   );
 
+  const dialog = document.querySelector(".image-dialog");
+  dialog.setAttribute("data-animate", "true");
+
   addDialogCloseEvent();
   addDialogBackgroundClickEvent();
   addDialogContentClickEvent();
-  addDialogNavigationEvents(imageIndex);
+  addDialogNavigationEvents();
   focusDialogCloseButton();
 };
 
@@ -132,7 +147,27 @@ const focusDialogCloseButton = () => {
   closeButton.focus();
 };
 
-const addDialogNavigationEvents = (imageIndex) => {
+const navigateToImage = (newIndex) => {
+  const image = GALLERY_IMAGES[newIndex];
+  const imageElement = document.querySelector(".image-dialog__image");
+  const titleElement = document.querySelector(".image-dialog__title");
+  const descriptionElement = document.querySelector(
+    ".image-dialog__description",
+  );
+  const counterElement = document.querySelector(".image-dialog__counter");
+
+  imageElement.src = image.src;
+  imageElement.alt = image.alt;
+  titleElement.textContent = image.title;
+  if (descriptionElement) {
+    descriptionElement.textContent = image.description;
+  }
+  counterElement.textContent = `${newIndex + 1}/${GALLERY_IMAGES.length}`;
+
+  currentImageIndex = newIndex;
+};
+
+const addDialogNavigationEvents = () => {
   const previousButton = document.querySelector(
     ".image-dialog__control-button:first-child",
   );
@@ -141,11 +176,11 @@ const addDialogNavigationEvents = (imageIndex) => {
   );
 
   previousButton.addEventListener("click", () => {
-    openDialog(getPreviousImageIndex(imageIndex));
+    navigateToImage(getPreviousImageIndex(currentImageIndex));
   });
 
   nextButton.addEventListener("click", () => {
-    openDialog(getNextImageIndex(imageIndex));
+    navigateToImage(getNextImageIndex(currentImageIndex));
   });
 };
 
@@ -175,12 +210,12 @@ const addEscapeKeyEvent = () => {
     }
 
     if (event.key === "ArrowRight") {
-      openDialog(getNextImageIndex(currentImageIndex));
+      navigateToImage(getNextImageIndex(currentImageIndex));
       return;
     }
 
     if (event.key === "ArrowLeft") {
-      openDialog(getPreviousImageIndex(currentImageIndex));
+      navigateToImage(getPreviousImageIndex(currentImageIndex));
     }
   });
 };

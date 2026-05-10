@@ -7,9 +7,12 @@
   background-color: transparent;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   transition:
-    transform 160ms ease,
-    border-color 160ms ease;
+    transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 300ms ease,
+    box-shadow 400ms ease;
 }
 
 .gallery-card__image {
@@ -17,11 +20,21 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: grayscale(100%);
+  transition:
+    filter 400ms ease,
+    transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .gallery-card:hover {
   border-color: var(--color-blue-40);
-  transform: scale(1.04);
+  transform: scale(1.12);
+  box-shadow: 0 12px 32px rgba(107, 193, 225, 0.25);
+  z-index: 2;
+}
+
+.gallery-card:hover .gallery-card__image {
+  filter: grayscale(0%);
 }
 
 .gallery-card:focus-visible {
@@ -30,6 +43,26 @@
 }
 
 /* Dialog */
+
+@keyframes dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
 
 .image-dialog {
   position: fixed;
@@ -42,6 +75,10 @@
   background-color: rgba(0, 0, 0, 0.55);
 }
 
+.image-dialog[data-animate="true"] {
+  animation: dialog-fade-in 300ms ease forwards;
+}
+
 .image-dialog__content {
   width: min(688px, 100%);
   padding: 56px 64px;
@@ -52,11 +89,21 @@
   gap: 48px;
 }
 
+.image-dialog[data-animate="true"] .image-dialog__content {
+  animation: dialog-scale-in 350ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
 .image-dialog__header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 48px;
+}
+
+.image-dialog__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .image-dialog__title {
@@ -64,6 +111,18 @@
   font-weight: 700;
   line-height: 1;
   color: var(--color-white);
+}
+
+.image-dialog__description {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-red-40);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  margin-top: 10px;
+  opacity: 0.85;
 }
 
 .image-dialog__close-button {
@@ -86,8 +145,10 @@
 
 .image-dialog__image {
   width: 100%;
+  height: 540px;
   display: block;
   object-fit: cover;
+  border-radius: 16px;
 }
 
 .image-dialog__controls {
