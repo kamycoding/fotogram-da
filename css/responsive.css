@@ -7,7 +7,10 @@
 
   .site-main {
     padding-top: 120px;
-    padding-bottom: 120px;
+  }
+
+  .site-footer {
+    margin-top: 120px;
   }
 
   .gallery-section__content {
@@ -25,7 +28,10 @@
 
   .site-main {
     padding-top: 96px;
-    padding-bottom: 96px;
+  }
+
+  .site-footer {
+    margin-top: 96px;
   }
 
   .gallery-section__content {
@@ -41,7 +47,7 @@
   }
 
   .image-dialog__content {
-    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
     padding: 40px;
     border-radius: 32px;
     gap: 32px;
@@ -78,7 +84,11 @@
 
   .site-main {
     padding-top: 72px;
-    padding-bottom: 72px;
+  }
+
+  .site-footer {
+    margin-top: 72px;
+    min-height: 112px;
   }
 
   .gallery-section__content {
@@ -106,7 +116,7 @@
   }
 
   .image-dialog__content {
-    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
     padding: 28px 24px;
     border-radius: 24px;
     gap: 24px;
@@ -162,7 +172,7 @@
   }
 
   .image-dialog__content {
-    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
     padding: 24px 18px;
     border-radius: 20px;
     gap: 20px;

@@ -23,7 +23,6 @@
 /* Main */
 .site-main {
   padding-top: 160px;
-  padding-bottom: 160px;
 }
 
 .gallery-section__title {
@@ -51,7 +50,7 @@
 /* Footer */
 .site-footer {
   width: 100%;
-  margin-top: auto;
+  margin-top: 160px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -62,11 +61,13 @@
 .site-footer::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 50%;
-  width: max(100%, var(--container-max-width));
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  aspect-ratio: 1920 / 127;
   background-image: url("../assets/icons/shape-footer.svg");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
