@@ -83,7 +83,7 @@
 
 .image-dialog__content {
   width: min(688px, 100%);
-  max-height: calc(100dvh - 48px);
+  max-height: calc(100dvh - 64px);
   padding: 32px 40px;
   border-radius: 32px;
   background-color: rgba(9, 33, 42, 0.65);
@@ -94,7 +94,6 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
-  overflow-y: auto;
 }
 
 .image-dialog[data-animate="true"] .image-dialog__content {
@@ -154,6 +153,7 @@
 .image-dialog__image {
   width: 100%;
   height: 560px;
+  max-height: 55vh;
   display: block;
   object-fit: cover;
   border-radius: 16px;
