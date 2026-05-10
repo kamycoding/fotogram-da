@@ -11,7 +11,10 @@ const getImageDialogTemplate = (image, index, totalImages) => {
     <div class="image-dialog" role="dialog" aria-modal="true" aria-label="Image dialog: ${image.title}">
       <div class="image-dialog__content">
         <div class="image-dialog__header">
-          <h2 class="image-dialog__title">${image.title}</h2>
+          <div class="image-dialog__header-text">
+            <h2 class="image-dialog__title">${image.title}</h2>
+            ${image.description ? `<p class="image-dialog__description">${image.description}</p>` : ""}
+          </div>
           <button class="image-dialog__close-button" type="button" aria-label="Close image dialog">
             <img
               class="image-dialog__close-icon"

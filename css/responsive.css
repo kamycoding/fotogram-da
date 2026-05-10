@@ -147,8 +147,8 @@
   }
 
   .image-dialog__controls {
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
+    gap: 40px;
   }
 
   .image-dialog__control-button {
