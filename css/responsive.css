@@ -1,3 +1,14 @@
+@media (max-width: 1440px) {
+  .site-footer {
+    min-height: clamp(120px, calc(100vw * 103 / 375), 160px);
+  }
+
+  .site-footer::before {
+    background-image: url("../assets/icons/shape-footer-mob.svg");
+    aspect-ratio: 375 / 103;
+  }
+}
+
 @media (max-width: 1200px) {
   :root {
     --header-padding-inline: 80px;
@@ -88,7 +99,6 @@
 
   .site-footer {
     margin-top: 72px;
-    min-height: 112px;
   }
 
   .gallery-section__content {
