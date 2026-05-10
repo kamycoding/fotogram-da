@@ -90,6 +90,10 @@ const openDialog = (imageIndex) => {
     GALLERY_IMAGES.length,
   );
 
+  addDialogEvents(imageIndex);
+};
+
+const addDialogEvents = (imageIndex) => {
   addDialogCloseEvent();
   addDialogBackgroundClickEvent();
   addDialogContentClickEvent();
