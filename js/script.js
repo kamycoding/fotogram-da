@@ -31,7 +31,7 @@ const GALLERY_IMAGES = [
     src: "./assets/img/newGallery/mein-altestes-hobby.png",
     alt: "Mein ältestes Hobby",
     title: "Mein ältestes Hobby",
-    description: "immer unterwegs",
+    description: "Dörfer bauen",
   },
 
   {
@@ -66,14 +66,14 @@ const GALLERY_IMAGES = [
     src: "./assets/img/newGallery/meine-grosste-herausforderung.jpg",
     alt: "Meine größte Herausforderung",
     title: "Meine größte Herausforderung",
-    description: "Apple-Ökosystem",
+    description: "dieses Gesicht ablehnen",
   },
 
   {
     src: "./assets/img/newGallery/meine-kindheit.jpg",
     alt: "Meine Kindheit",
     title: "Meine Kindheit",
-    description: "Dörfer bauen",
+    description: "immer unterwegs",
   },
 
   {
