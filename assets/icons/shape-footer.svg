@@ -1,3 +1,3 @@
-<svg width="1920" height="127" viewBox="0 0 1920 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 127H1920V24.9102C1676.67 7.95 1308.77 -0.999994 959.333 -0.999994C610.447 -0.999994 280.373 4.9 0 24.7883V127Z" fill="#09212A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 120" preserveAspectRatio="none" width="1920" height="120">
+  <path d="M0 120H1920V28C1676.67 8 1308.77 -2 959.333 -2C610.447 -2 280.373 6 0 28V120Z" fill="#09212A"/>
 </svg>
